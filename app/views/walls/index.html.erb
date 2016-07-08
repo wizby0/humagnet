@@ -1,0 +1,19 @@
+<h1>Listing walls</h1>
+ 
+<table>
+  <tr>
+    <th>Number</th>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+ 
+  <% @walls.each do |wall| %>
+    <tr>
+      <td><%= wall.id %></td>
+      <td><%= wall.title %></td>
+      <td><%= wall.text %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'Back', walls_path %>
