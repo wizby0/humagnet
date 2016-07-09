@@ -4,11 +4,10 @@ class CommentsController < ApplicationController
 		@comment = @wall.comments.create(comment_params)
 		redirect_to wall_path(@wall)
 	end
-	def destory
+	def destroy
 		@wall = Wall.find(params[:wall_id])
 		@comment = @wall.comments.find(params[:id])
-		@comment.destory
-		#redirect_to wall_path(@wall)
+		@comment.destroy
 		redirect_to wall_path(@wall)
 	end
 
