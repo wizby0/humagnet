@@ -12,10 +12,10 @@
       <td ><%= wall.id %></td>
       <td><%= wall.title %></td>
       <td><%= wall.text %></td>
-      <td><%= link_to 'Show', wall_path(wall) %></td>
+      <td><%= link_to '', wall_path(wall), class: "glyphicon glyphicon-zoom-in btn-default" %></td>
       <td><%= link_to '', edit_wall_path(wall) , class: "glyphicon glyphicon-wrench btn-default" %></td>
-      <td><%= link_to 'Destroy', walls_path(wall), 
-                      method: :delete, data: {confirm: 'Are you sure?' } %></td>
+      <td><%= link_to '', wall, 
+                      method: :delete, data: {confirm: 'Are you sure?' }, class: "glyphicon glyphicon-trash btn-default" %></td>
 
     </tr>
   <% end %>

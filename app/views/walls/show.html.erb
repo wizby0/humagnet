@@ -26,5 +26,5 @@
 
 <%= link_to '', walls_path,class: " glyphicon glyphicon-th-list btn default_btn" %> 
 <%= link_to '', new_wall_path,class: " glyphicon glyphicon-pencil btn default_btn" %> 
-<%= link_to 'Destroy', @wall,
-                      method: :delete%>
+<%= link_to '', @wall,
+                      method: :delete, data: {confirm: 'Are you sure?' }, class: "glyphicon glyphicon-trash btn default_btn" %>
