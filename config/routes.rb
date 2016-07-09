@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'welcome_gates/index'
+  get 'walls/timeline', to: "walls#timeline"
   resources :walls do
     resources :comments
   end

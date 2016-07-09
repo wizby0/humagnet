@@ -38,6 +38,11 @@ class WallsController < ApplicationController
 		redirect_to walls_path
 	end
 
+	
+	def timeline
+		@walls = Wall.all
+	end
+
 	private
 		def wall_params
 			params.require(:wall).permit(:title, :text,:user_id,:read_authority)
