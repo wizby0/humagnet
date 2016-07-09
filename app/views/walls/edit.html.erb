@@ -1,6 +1,18 @@
-<%= form_for :wall, url: walls_path do |f| %>
+<h1>this is editing wall</h1>
 
-	<h1>this is new note</h1>
+    <%= form_for :wall, url: wall_path(@wall), method: :patch do |f| %>
+  <% if @wall.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@wall.errors.count, "error") %> prohibited
+      this wall from being saved:</h2>
+    <ul>
+    <% @wall.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+
 	<p>
 	<%= f.label :title %><br>
 	<%= f.text_field :title %>
@@ -31,10 +43,7 @@
 
 
  	  <p>
-    <%= f.submit %> 
-    <%= link_to '', walls_path, class: "glyphicon glyphicon-remove btn btn-default" %> 
-    <%= link_to '',  walls_path,class: "glyphicon glyphicon-ok btn btn-default" %> 
-   <%= f.submit '', :class => "my_sbtn my_sbtn2"  %>
+    <%= f.submit %>  <%= link_to '', walls_path, class: "glyphicon glyphicon-remove btn btn-default" %> 
 
   </p>
 <% end %>

@@ -20,10 +20,24 @@ class WallsController < ApplicationController
 
 	end
 	def edit
+		@wall = Wall.find(params[:id])
 	end
 	def update
+		 @wall = Wall.find(params[:id])
+ 
+		  if @wall.update(wall_params)
+		    redirect_to @wall
+		  else
+		    render 'edit'
+		  end
+
 	end
 	def destroy
+		render Wall.find(params[:id]).inspect
+		@wall = Wall.find(params[:id])
+		@wall.destroy
+		 
+		#redirect_to walls_path
 	end
 
 	private
