@@ -33,11 +33,11 @@ class WallsController < ApplicationController
 
 	end
 	def destroy
-		render Wall.find(params[:id]).inspect
+		
 		@wall = Wall.find(params[:id])
 		@wall.destroy
 		 
-		#redirect_to walls_path
+		redirect_to walls_path(@wall)
 	end
 
 	private
