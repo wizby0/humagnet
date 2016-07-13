@@ -31,7 +31,11 @@
 
 
  	  <p>
-    <%= f.submit %> 
+    <%#= f.submit "", class: "btn btn-primary btn-lg" %>
+    <%= button_tag :submit, class: "" do %>
+        <%= content_tag :span, "", class: "glyphicon glyphicon-ok btn btn-default" %>
+    <% end %> 
+
     <%= link_to '', walls_path, class: "glyphicon glyphicon-remove btn btn-default" %> 
     <%= link_to '',  walls_path,class: "glyphicon glyphicon-ok btn btn-default" %> 
    <%= f.submit '', :class => "my_sbtn my_sbtn2"  %>

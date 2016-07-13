@@ -12,9 +12,10 @@
 
 <table class="table">
   <tr>
-    <th>Number</th>
+    <th>Wall_id</th>
     <th>Title</th>
     <th>Text</th>
+    <th>authority</th>
   </tr>
  
   <% @walls.each do |wall| %>
@@ -22,6 +23,7 @@
       <td ><%= wall.id %></td>
       <td><%= wall.title %></td>
       <td><%= wall.text %></td>
+      <td><%= wall.read_authority %></td>
       <td><%= link_to '', wall_path(wall), class: "glyphicon glyphicon-zoom-in btn-default" %></td>
       <td><%= link_to '', edit_wall_path(wall) , class: "glyphicon glyphicon-wrench btn-default" %></td>
       <td><%= link_to '', wall, 
