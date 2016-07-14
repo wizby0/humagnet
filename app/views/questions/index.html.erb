@@ -1,0 +1,15 @@
+<table>
+  <tr>
+    <th>content</th>
+    <th>seletion_option</th>
+    <th>skill_area</th>
+  </tr>
+ 
+  <% @questions.each do |article| %>
+    <tr>
+      <td><%= article.content %></td>
+      <td><%= article.seletion_option %></td>
+      <td><%= article.skill_area %></td>
+    </tr>
+  <% end %>
+</table>

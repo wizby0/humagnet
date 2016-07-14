@@ -1,0 +1,21 @@
+<%= form_for :question, url: questions_path do |f| %>
+
+<p>
+    <%= f.label :content %><br>
+    <%= f.text_field :string %>
+  </p>
+ 
+  <p>
+    <%= f.label :selection_option %><br>
+    <%= f.text_area :string %>
+  </p>
+
+  <p>
+    <%= f.label :skill_area %><br>
+    <%= f.text_area :integer %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

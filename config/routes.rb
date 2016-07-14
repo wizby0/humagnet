@@ -5,6 +5,16 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+resources :questions
+# get '/questions'
+# post '/questions'
+# get '/questions/new'
+# get '/questions/:id/edit'
+# get '/questions/:id'
+# patch '/questions/:id'
+# put '/questions/:id'
+# delete '/questions/:id'
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
