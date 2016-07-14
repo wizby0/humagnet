@@ -1,6 +1,9 @@
 class WallsController < ApplicationController
+	#before_action : set_wall, only: [:show, :edit, :destroy]
+	#before_action : check_authority
+	# after_action : set_wall, except
 	def show
-		@wall = Wall.find(params[:id])
+		
 	end
 
 	def new
@@ -20,7 +23,6 @@ class WallsController < ApplicationController
 
 	end
 	def edit
-		@wall = Wall.find(params[:id])
 	end
 	def update
 		 @wall = Wall.find(params[:id])
@@ -33,7 +35,6 @@ class WallsController < ApplicationController
 
 	end
 	def destroy
-		@wall = Wall.find(params[:id])
 		@wall.destroy
 		redirect_to walls_path
 	end
@@ -46,5 +47,9 @@ class WallsController < ApplicationController
 	private
 		def wall_params
 			params.require(:wall).permit(:title, :text,:user_id,:read_authority)
+		end
+	private
+		def set_wall
+			@wall = Wall.find(params[:id]) 
 		end
 end
