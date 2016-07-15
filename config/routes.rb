@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+resources :answer_shorts
+
 resources :questions
 # get '/questions'
 # post '/questions'
