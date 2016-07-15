@@ -16,10 +16,10 @@ class WallsController < ApplicationController
 	def create
 	#	render plain: params[:wall].inspect
 	#	render Wall.new(wall_params).inspect
-		@wall = Wall.new(wall_params)
+		@question = Question.new(params.require(:question).permit(:content, :selection_option, :skill_area))
 
-		@wall.save
-		redirect_to @wall
+		@question.save
+		redirect_to walls_answer_list_path
 
 	end
 	def edit
@@ -43,6 +43,21 @@ class WallsController < ApplicationController
 	def timeline
 		@walls = Wall.all
 	end
+
+	def survey
+		@questions = Question.all
+		@walls = Wall.all
+	end
+
+	def answer_list
+		@questions = Question.all
+		@walls = Wall.all
+	end
+	def question_list
+		@questions = Question.all
+		@walls = Wall.all
+	end
+
 
 	private
 		def wall_params

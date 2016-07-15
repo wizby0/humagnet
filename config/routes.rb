@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   get 'welcome_gates/index'
   get 'walls/timeline', to: "walls#timeline"
   get 'walls/survey', to: "walls#survey"
+  get 'walls/answer_list', to: "walls#answer_list"
+  get 'walls/question_list', to: "walls#question_list"
   resources :walls do
     resources :comments
   end
