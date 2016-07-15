@@ -17,12 +17,12 @@
 
   <% @answer_shorts.each do |answer_short| %>
     <tr>
-      <td ><%= answer_short.id %></td>
+      <td><%= answer_short.id %></td>
       <td><%= answer_short.answer %></td>
       <td><%= answer_short.public_result %></td>
       <td><%= answer_short.user_id %></td>
       <td><%= answer_short.question_id %></td>
-       <td><%= link_to '', answer_short_path(answer_short), class: "glyphicon glyphicon-zoom-in btn-default" %></td>
+      <td><%= link_to '', answer_short_path(answer_short), class: "glyphicon glyphicon-zoom-in btn-default" %></td>
       <td><%= link_to '', edit_answer_short_path(answer_short) , class: "glyphicon glyphicon-wrench btn-default" %></td>
       <td><%= link_to '', answer_short, 
                       method: :delete, data: {confirm: 'Are you sure?' }, class: "glyphicon glyphicon-trash btn-default" %></td>
@@ -35,5 +35,5 @@
 </nav>
 </div>
 </div>
-  <%= link_to '', new_question_path, class: "glyphicon glyphicon-plus btn btn-default floating_btn" %>
+  <%= link_to '', new_answer_short_path, class: "glyphicon glyphicon-plus btn btn-default floating_btn" %>
 

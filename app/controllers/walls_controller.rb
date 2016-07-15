@@ -45,12 +45,13 @@ class WallsController < ApplicationController
 	end
 
 	def survey
+		@answer_shorts = AnswerShort.all
 		@questions = Question.all
 		@walls = Wall.all
 	end
 
 	def answer_list
-		@questions = Question.all
+		@answer_shorts = AnswerShort.all
 		@walls = Wall.all
 	end
 	def question_list
