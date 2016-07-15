@@ -10,6 +10,8 @@ class WallsController < ApplicationController
 	end
 
 	def index
+		@answer_shorts = AnswerShort.all
+		@questions = Question.all
 		@walls = Wall.all
 	end
 
