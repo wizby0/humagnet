@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+gem 'devise'
+gem 'rolify'
+gem 'authority'
+
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '~> 5.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
