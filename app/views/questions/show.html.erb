@@ -24,3 +24,7 @@
 </p>
 
 
+<%= link_to '', questions_path,class: " glyphicon glyphicon-th-list btn default_btn" %> 
+<%= link_to '', edit_question_path,class: " glyphicon glyphicon-wrench btn btn-default" %> 
+<%= link_to '', @question,
+                      method: :delete, data: {confirm: 'Are you sure?' }, class: "glyphicon glyphicon-trash btn default_btn" %>
