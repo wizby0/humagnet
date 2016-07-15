@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'user/index'
+
   get 'welcome_gates/index'
   get 'walls/timeline', to: "walls#timeline"
   get 'walls/survey', to: "walls#survey"
@@ -8,6 +10,7 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+resources :users
 resources :answer_shorts
 
 resources :questions
